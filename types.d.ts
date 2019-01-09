@@ -6,8 +6,10 @@ export type USAProps = {
 
 export type USAState = {};
 
-declare class USA extends React.Component<USAProps, USAState> {}
+export type StateProps = {};
+
+declare class USASvg extends React.Component<USAProps, USAState> {}
 
 declare module 'react-usa-svg' {}
 
-export default USA;
+export default USASvg;
