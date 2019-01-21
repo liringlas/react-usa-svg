@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 export type USAProps = {
-  color: string;
+  color?: string;
 };
 
 export type USAState = {};

@@ -2,7 +2,7 @@ import * as React from 'react';
 import { USAProps, USAState } from '../types';
 
 export default class USASvg extends React.Component<USAProps, USAState> {
-  renders() {
+  render() {
     return (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 959 593">
         <g id="react-usa-svg-usa">
@@ -219,3 +219,5 @@ export default class USASvg extends React.Component<USAProps, USAState> {
     );
   }
 }
+
+export * from './states';
