@@ -9,8 +9,8 @@
     "usa",
     "map"
   ],
-  "main": "./lib/index.js",
-  "module": "./lib/index.js",
+  "main": "./lib",
+  "module": "./lib",
   "types": "./lib/types.d.ts",
   "files": [
     "lib"
