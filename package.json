@@ -2,8 +2,19 @@
   "author": "Konstantin Ryzhov",
   "name": "react-usa-svg",
   "version": "1.0.3",
-  "description": "",
-  "main": "index.js",
+  "description": "React.js SVG-components for USA map",
+  "keywords": [
+    "react",
+    "svg",
+    "usa",
+    "map"
+  ],
+  "main": "lib/index.js",
+  "module": "lib/index.js",
+  "typings": "./types.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "client": "webpack-dev-server --hot --inline --mode development --config webpack.config.ts",
