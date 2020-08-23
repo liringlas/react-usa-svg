@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { StateProps } from '../../types';
+import * as React from "react";
+import { StateProps } from "../../index.d";
 
 export const Florida = (props: StateProps) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 159.3 134.3">

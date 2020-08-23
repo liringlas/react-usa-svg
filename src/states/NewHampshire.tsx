@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { StateProps } from '../../types';
+import * as React from "react";
+import { StateProps } from "../../index.d";
 
 export const NewHampshire = (props: StateProps) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.8 59.6">
