@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { USAProps, USAState } from '../types';
+import * as React from "react";
+import { USAProps, USAState } from "../index.d";
 
-export default class USASvg extends React.Component<USAProps, USAState> {
+export default class USA extends React.Component<USAProps, USAState> {
   render() {
     return (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 959 593">
@@ -30,7 +30,10 @@ export default class USASvg extends React.Component<USAProps, USAState> {
             id="CA"
             d="M122.7 385.9l-19.7-2.7-10-1.5-.5-1.8v-9.4l-.3-3.2-2.6-4.2-.8-2.3-3.9-4.2-2.9-4.7-2.7-.2-3.2-.8-.3-1 1.5-.6-.6-3.2-1.5-2.1-4.8-.8-3.9-2.1-1.1-2.3-2.6-4.8-2.9-3.1H57l-3.9-2.1-4.5-1.8-4.2-.5-2.4-2.7.5-1.9 1.8-7.1.8-1.9v-2.4l-1.6-1-.5-2.9-1.5-2.6-3.4-5.8-1.3-3.1-1.5-4.7-1.6-5.3-3.2-4.4-.5-2.9.8-3.9h1.1l2.1-1.6 1.1-3.6-1-2.7-2.7-.5-1.9-2.6-2.1-3.7-.2-8.2.6-1.9.6-2.3.5-2.4-5.7-6.3V236l.3-.5.3-3.2-1.3-4-2.3-4.8-2.7-4.5-1.8-3.9 1-3.7.6-5.8 1.8-3.1.3-6.5-1.1-3.6-1.6-4.2L14 184l.8-3.2 1.5-4.2 1.8-.8.3-1.1 3.1-2.6 5.2-11.8.2-7.4 1.69-4.9 38.69 11.8 25.6 6.6-8 31.3-8.67 33.1L88.84 250 131 312.3l17.1 26.1-.4 3.1 2.8 5.2 1.1 5.4 1 1.5.7.6-.2 1.4-1.4 1-3.4 1.6-1.9 2.1-1.7 3.9-.5 4.7-2.6 2.5-2.3 1.1-.1 6.2-.6 1.9 1 1.7 3 .3-.4 1.6-1.4 2-3.9.6zM48.8 337l1.3 1.5-.2 1.3-3.2-.1-.6-1.2-.6-1.5zm1.9 0l1.2-.6 3.6 2.1 3.1 1.2-.9.6-4.5-.2-1.6-1.6zm20.7 19.8l1.8 2.3.8 1 1.5.6.6-1.5-1-1.8-2.7-2-1.1.2v1.2zm-1.4 8.7l1.8 3.2 1.2 1.9-1.5.2-1.3-1.2s-.7-1.5-.7-1.9v-2.2z"
           />
-          <path id="CO" d="M380.2 235.5l-36-3.5-79.1-8.6-2.2 22.1-7 50.4-1.9 13.7 34 3.9 37.5 4.4 34.7 3 14.3.6z" />
+          <path
+            id="CO"
+            d="M380.2 235.5l-36-3.5-79.1-8.6-2.2 22.1-7 50.4-1.9 13.7 34 3.9 37.5 4.4 34.7 3 14.3.6z"
+          />
           <path
             id="CT"
             d="M852 190.9l3.6-3.2 1.9-2.1.8.6 2.7-1.5 5.2-1.1 7-3.5-.6-4.2-.8-4.4-1.6-6-4.3 1.1-21.8 4.7.6 3.1 1.5 7.3v8.3l-.9 2.1 1.7 2.2z"
@@ -205,7 +208,14 @@ export default class USASvg extends React.Component<USAProps, USAState> {
           />
           <g id="DC">
             <path id="DC1" d="M801.8 253.8l-1.1-1.6-1-.8 1.1-1.6 2.2 1.5z" />
-            <circle id="DC2" stroke="#FFF" stroke-width="1.5" cx="801.3" cy="251.8" r="5" />
+            <circle
+              id="DC2"
+              stroke="#FFF"
+              stroke-width="1.5"
+              cx="801.3"
+              cy="251.8"
+              r="5"
+            />
           </g>
         </g>
         <path
@@ -220,4 +230,4 @@ export default class USASvg extends React.Component<USAProps, USAState> {
   }
 }
 
-export * from './states';
+export * from "./states";

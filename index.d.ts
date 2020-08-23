@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from "react";
 
 export type USAProps = {
   color?: string;
@@ -8,11 +8,11 @@ export type USAState = {};
 
 export type StateProps = {};
 
-declare class USASvg extends React.Component<USAProps, USAState> {}
+declare class USA extends React.Component<USAProps, USAState> {}
 
-declare module 'react-usa-svg' {}
+declare module "react-usa-svg" {}
 
-export default USASvg;
+export default USA;
 
 export function Alabama(props: StateProps): JSX.Element;
 export function Alaska(props: StateProps): JSX.Element;

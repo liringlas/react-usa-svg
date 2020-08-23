@@ -11,14 +11,14 @@
   ],
   "main": "./lib",
   "module": "./lib",
-  "types": "./lib/types.d.ts",
+  "types": "./lib/index.d.ts",
   "files": [
     "lib"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "client": "webpack-dev-server --hot --inline --mode development --config webpack.config.ts",
-    "build": "rm -rf ./lib  && tsc && cp types.d.ts lib/",
+    "dev": "webpack-dev-server --hot --inline --mode development --config webpack.config.ts",
+    "build": "rm -rf ./lib  && tsc && cp index.d.ts lib/",
     "prepublish": "yarn build",
     "release-patch": "npm version patch -m 'New patch version release'",
     "release-minor": "npm version minor -m 'New minor version release'",
@@ -26,13 +26,18 @@
   },
   "license": "WTFPL",
   "dependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3"
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.9",
-    "typescript": "^3.1.6"
+    "html-webpack-plugin": "^4.3.0",
+    "ts-loader": "^8.0.2",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "resolutions": {
     "@types/react": "^16.7.18"
