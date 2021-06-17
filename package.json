@@ -1,7 +1,7 @@
 {
   "author": "Konstantin Ryzhov",
   "name": "react-usa-svg",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "React.js SVG-components for USA map",
   "keywords": [
     "react",
@@ -16,25 +16,40 @@
     "lib"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --hot --inline --mode development --config webpack.config.ts",
-    "build": "rm -rf ./lib  && tsc && cp index.d.ts lib/",
+    "dev": "parcel ./dev/index.html",
+    "build": "rm -rf ./lib  && tsc && cp ./src/index.d.ts lib/ && mkdir ./lib/svg && cp -R ./src/svg lib/",
     "prepublish": "yarn build",
+    "storybook": "yarn start-storybook",
     "release-patch": "npm version patch -m 'New patch version release'",
     "release-minor": "npm version minor -m 'New minor version release'",
     "release-major": "npm version major -m 'New major version release'"
   },
   "license": "WTFPL",
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
   },
   "devDependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
+    "@nivo/bar": "^0.67.0",
+    "@nivo/core": "^0.67.0",
+    "@nivo/line": "^0.67.0",
+    "@nivo/pie": "^0.67.0",
+    "@storybook/addon-actions": "^6.1.11",
+    "@storybook/addon-essentials": "^6.1.11",
+    "@storybook/addon-links": "^6.1.11",
+    "@storybook/react": "^6.1.11",
+    "@types/d3-shape": "^2.0.0",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.9",
+    "babel-loader": "^8.2.2",
+    "d3-shape": "^2.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "parcel-bundler": "^1.12.4",
+    "storybook": "^6.1.11",
     "ts-loader": "^8.0.2",
-    "typescript": "^3.9.7",
+    "typescript": "^4.1.3",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
