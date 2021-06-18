@@ -15,6 +15,10 @@
   "files": [
     "lib"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/catbug-developer/react-usa-svg.git"
+  },
   "scripts": {
     "dev": "parcel ./dev/index.html",
     "build": "rm -rf ./lib  && tsc && cp ./src/index.d.ts lib/ && mkdir ./lib/svg && cp -R ./src/svg lib/",
