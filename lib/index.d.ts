@@ -1,8 +1,6 @@
 import { SVGProps } from "react";
 import { STATES_LIST } from "./STATES_LIST";
 
-// declare module "react-usa-svg" {}
-
 export type StatesListRendererMap = Omit<
   {
     [key in keyof typeof STATES_LIST]: (p: RendererProps) => React.ReactElement;
@@ -10,17 +8,27 @@ export type StatesListRendererMap = Omit<
   "AS" | "GU" | "MH" | "MP" | "VI"
 >;
 
+export type StatesAbbr = keyof StatesListRendererMap;
+
 export type RendererProps = {
   svg_props: React.SVGProps<SVGPathElement>;
 };
+
 export interface USAProps {
+  // Extra control on every US state SVG renderer
   HOC?: (props: {
     renderer: React.FC<RendererProps>;
     svg_props?: SVGProps<SVGPathElement>;
-    abbr: keyof StatesListRendererMap;
+    abbr: StatesAbbr;
   }) => JSX.Element;
-  getSVGProps?: (abbr: keyof StatesListRendererMap) => SVGProps<SVGPathElement>;
+
+  // Want to get <path /> element props based on specific state?
+  getSVGProps?: (abbr: StatesAbbr) => SVGProps<SVGPathElement>;
+
+  // SVG filter elements will be rendered inside main <svg> component
   SVGFilters?: Array<React.FC<React.SVGProps<SVGFilterElement>>>;
+
+  // Props for additional frames
   framesStroke?: string;
   framesStrokeWidth?: string | number;
 }
