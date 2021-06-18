@@ -78,5 +78,4 @@ typings/
 #DynamoDB Local files 
 .dynamodb/ 
 
-lib
 .DS_Store

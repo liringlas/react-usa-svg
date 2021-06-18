@@ -6,11 +6,12 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "removeComments": true,
-    "declaration": false,
+    "declaration": true,
     "sourceMap": true,
     "jsx": "react",
-    "typeRoots": ["types.d.ts", "node_modules/@types"]
+    "typeRoots": ["index.d.ts", "node_modules/@types"],
+    "esModuleInterop": true
   },
   "include": ["./src/**/*.tsx", "./src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "./src/stories/*.tsx", "./src/stories/*.ts"]
 }
