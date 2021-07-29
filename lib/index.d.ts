@@ -1,11 +1,13 @@
 import { SVGProps } from "react";
 import { STATES_LIST } from "./STATES_LIST";
 
+export type StatesListUnrendered = "AS" | "GU" | "MH" | "MP" | "VI";
+
 export type StatesListRendererMap = Omit<
   {
     [key in keyof typeof STATES_LIST]: (p: RendererProps) => React.ReactElement;
   },
-  "AS" | "GU" | "MH" | "MP" | "VI"
+  StatesListUnrendered
 >;
 
 export type StatesAbbr = keyof StatesListRendererMap;
@@ -27,6 +29,9 @@ export interface USAProps {
 
   // SVG filter elements will be rendered inside main <svg> component
   SVGFilters?: Array<React.FC<React.SVGProps<SVGFilterElement>>>;
+
+  // Extra renderers
+  ExtraRenderers?: Array<React.FC<any>>;
 
   // Props for additional frames
   framesStroke?: string;
