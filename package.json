@@ -1,7 +1,7 @@
 {
   "author": "Konstantin Ryzhov",
   "name": "react-usa-svg",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "React.js SVG-components for USA map",
   "keywords": [
     "react",
