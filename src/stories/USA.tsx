@@ -12,7 +12,11 @@ import RemoveIcon from "@material-ui/icons/Remove";
 import { makeStyles, Theme } from "@material-ui/core/styles";
 
 import { USA as ComponentUSA } from "../index";
-import { USAProps, StatesListRendererMap } from "../index.d";
+import {
+  USAProps,
+  StatesListRendererMap,
+  StatesListUnrendered,
+} from "../index.d";
 import { STATES_LIST } from "../STATES_LIST";
 
 import { throttle } from "../utils/throttle";
@@ -20,12 +24,17 @@ import { getRandomArbitrary } from "../utils/getRandomArbitrary";
 
 import { HtmlTooltip } from "./HtmlTooltip";
 
-// type StateKeys = keoyf StatesListRendererMap
 let DataMap = new Map<keyof StatesListRendererMap, { count: number | null }>();
 
-Object.keys(STATES_LIST).forEach((abbr: keyof StatesListRendererMap) => {
-  DataMap.set(abbr, { count: getRandomArbitrary(0, 128) });
-});
+let Filter: StatesListUnrendered[] = ["AS", "GU", "MH", "MP", "VI"];
+
+Object.keys(STATES_LIST)
+  .filter((item) => !Filter.includes(item as StatesListUnrendered))
+  .forEach((abbr) => {
+    DataMap.set(abbr as keyof StatesListRendererMap, {
+      count: getRandomArbitrary(0, 128),
+    });
+  });
 
 let getFillColor = (count: number | null | undefined) => {
   if (count == null) {
@@ -135,6 +144,19 @@ export function USA(props: USAProps) {
           <feDropShadow dx="0.2" dy="0.4" stdDeviation="1" />
         </filter>
       ),
+    ],
+
+    ExtraRenderers: [
+      () => {
+        return (
+          <foreignObject x="236" y="78" width="160" height="160">
+            {/* <div xmlns="http://www.w3.org/1999/xhtml"> */}
+            <div style={{ background: "white", display: "inline-block" }}>
+              Extra renderer
+            </div>
+          </foreignObject>
+        );
+      },
     ],
     HOC: ({ renderer: Renderer, svg_props: _svg_props, abbr }) => {
       let svg_props = _svg_props != null ? _svg_props : {};

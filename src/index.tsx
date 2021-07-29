@@ -28,6 +28,7 @@ let defaultFramesStrokeWidth = 2;
 export function USA(props: USAProps) {
   let {
     SVGFilters,
+    ExtraRenderers,
     HOC,
     framesStroke: _framesStroke,
     framesStrokeWidth: _framesStrokeWidth,
@@ -72,6 +73,11 @@ export function USA(props: USAProps) {
         strokeWidth={framesStrokeWidth}
         d="M215 493v55l36 45M0 425h147l68 68h85l54 54v46"
       />
+
+      {/* Some extra renderers */}
+      {ExtraRenderers?.map((ExtraRendererComponent, key) => (
+        <ExtraRendererComponent key={key} />
+      ))}
     </svg>
   );
 }
